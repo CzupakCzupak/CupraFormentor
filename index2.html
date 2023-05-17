@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slide-container{
+            margin: 0 auto;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .slide-btn{
+            width: 100px;
+            height: 100px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+        }
+        .slider{
+            width: 800px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .slide{
+            visibility: hidden;
+            opacity: 0;
+            transition: .5s all;
+        }
+
+        .active-slide{
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .changecolor{
+            color: aqua;
+            font-weight: 900;
+        }
+
+        .slide-pagination{
+            display: flex;
+            gap: 20px;
+            margin-top: 300px;
+        }
+
+        .pagination{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #444;
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+        }
+
+        .pagination.pagination-active{
+            background-color: #090;
+            transition: all .3s;
+        }
+
+        .d-f{
+            display: flex;
+        }
+        
+        .fd-c{
+            flex-direction: column;
+        }
+
+        .ai-c{
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <button class="prev slide-btn" data-name="prev">Previous</button>
+        <div class="d-f fd-c ai-c">
+            <div class="slider">
+                <div class="slide">SLIDE 1</div>
+                <div class="slide">SLIDE 2</div>
+                <div class="slide active-slide">SLIDE 3</div>
+                <div class="slide">SLIDE 4</div>
+                <div class="slide">SLIDE 5</div>
+            </div>
+            <div class="slide-pagination">
+                <div class="pagination">1</div>
+                <div class="pagination">2</div>
+                <div class="pagination pagination-active">3</div>
+                <div class="pagination">4</div>
+                <div class="pagination">5</div>
+            </div>
+        </div>
+        <button class="next slide-btn" data-name="next">Next</button>
+    </div>
+    <script>
+        const btns = document.querySelectorAll('.slide-btn')
+        btns.forEach(item =>{
+            item.addEventListener('click',slider)
+        })
+
+        const slides = document.querySelector('.slider')
+        const paginationContainer = document.querySelector(".slide-pagination")
+        function slider(e){
+            const activeSlide = document.querySelector(".active-slide")
+            const currentPagination = document.querySelector(".pagination-active")
+            const lastChild = slides.lastElementChild
+            const firstChild = slides.firstElementChild
+            const lastPagination = paginationContainer.lastElementChild
+            const firstPagination = paginationContainer.firstElementChild
+            console.log(firstPagination);
+            console.log(lastPagination);
+            let nextSlide
+            let nextPagination
+            if(undefined === e.target.dataset){
+                if(activeSlide == lastChild){
+                    nextSlide = firstChild
+                    nextPagination = firstPagination   
+                }else{
+                    nextSlide = activeSlide.nextElementSibling
+                    nextPagination = currentPagination.nextElementSibling
+                }
+            }else{
+                if(activeSlide == lastChild){
+                    if(e.target.dataset.name === "prev"){
+                        nextSlide = activeSlide.previousElementSibling
+                        nextPagination = currentPagination.previousElementSibling
+                    }else{
+                        nextSlide = firstChild
+                        nextPagination = firstPagination
+                    }
+                }else if(firstChild == activeSlide){
+                    if(e.target.dataset.name === "next"){
+                        nextSlide = activeSlide.nextElementSibling
+                        nextPagination = currentPagination.nextElementSibling
+                    }else{
+                        nextSlide = lastChild
+                        nextPagination = lastPagination
+                    }
+                }else{
+                    if(e.target.dataset.name === "next"){
+                        nextSlide = activeSlide.nextElementSibling
+                        nextPagination = currentPagination.nextElementSibling
+                    }else{
+                        nextSlide = activeSlide.previousElementSibling
+                        nextPagination = currentPagination.previousElementSibling
+                    }
+                }
+            }
+
+                            
+
+
+            nextSlide.classList.add("active-slide")
+            activeSlide.classList.remove("active-slide")
+            nextPagination.classList.add("pagination-active")
+            currentPagination.classList.remove("pagination-active")
+            setTimeout(slider,2000)
+        }
+
+
+
+        window.onload = slider
+    </script>
+</body>
+</html>

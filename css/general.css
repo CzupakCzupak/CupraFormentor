@@ -1,0 +1,204 @@
+@font-face {
+    font-family: "CUPRA";
+    src: url("../fonts/Cupra-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+  }
+@font-face {
+    font-family: "CUPRA";
+    src: url("../fonts/Cupra-ExtraLight.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+  }
+@font-face {
+    font-family: "CUPRA";
+    src: url("../fonts/Cupra-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+  }
+@font-face {
+    font-family: "CUPRA";
+    src: url("../fonts/Cupra-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: "CUPRA";
+    src: url("../fonts/Cupra-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "CUPRA";
+    src: url("../fonts/Cupra-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'CUPRA';
+    position: relative;
+}
+
+.container{
+    max-width: 143.6rem;
+    margin: 0 auto;
+}
+
+
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+.white-svg{
+    fill: #fff;
+}
+
+.black-svg{
+   fill: #190F14; 
+}
+
+.fw-900{
+    font-weight: 900;
+}
+
+.fw-750{
+    font-weight: 750;
+}
+
+.fw-700{
+    font-weight: 700;
+}
+
+.fw-500{
+    font-weight: 500;
+}
+
+.fw-400{
+    font-weight: 400;
+}
+
+.mb-64{
+    margin-bottom: 6.4rem;
+}
+
+.mb-52{
+    margin-bottom: 5.2rem;
+}
+
+.mb-41{
+    margin-bottom: 4.1rem;
+}
+
+.mb-24{
+    margin-bottom: 2.4rem;
+}
+
+.mb-32{
+    margin-bottom: 3.2rem;
+}
+
+.mb-36{
+    margin-bottom: 3.6rem;
+}
+
+.mb-16{
+    margin-bottom: 1.6rem;
+}
+
+.mb-12{
+    margin-bottom: 1.2rem;
+}
+
+.ml-32{
+    margin-left: 3.2rem;
+}
+
+.white{
+    color: #fff;
+}
+
+.black{
+    color:#000
+}
+
+.new-black{
+    color: #190F14;
+}
+
+.orange{
+    color: #EA5D1A;
+}
+
+.gray{
+    color:#747468;
+}
+
+.specs-text{
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2.8rem;   
+    margin-bottom: 0.8rem;
+}
+
+.d-f{
+    display: flex;
+}
+
+.ai-c{
+    align-items: center;
+}
+
+.ai-fs{
+    align-items: flex-start;
+}
+
+.jc-e{
+    justify-content: flex-end;
+}
+
+.jc-b{
+    justify-content: space-between;
+}
+
+.fd-c{
+    flex-direction: column;
+}
+
+.gap-12{
+    gap: 1.2rem;
+}
+
+
+
+.ta-c{
+    text-align: center;
+}
+
+.fs-16{
+    font-size: 1.6rem;
+}
+
