@@ -159,6 +159,14 @@ button{
     margin-bottom: 12.8rem;
 }
 
+.mb-76{
+    margin-bottom: 7.6rem;
+}
+
+.mb-38{
+    margin-bottom: 3.8rem;
+}
+
 .mb-16{
     margin-bottom: 1.6rem;
 }
@@ -226,10 +234,18 @@ button{
     gap: 1.2rem;
 }
 
+.gap-48{
+    gap: 4.8rem;
+}
+
 
 
 .ta-c{
     text-align: center;
+}
+
+.fs-48{
+    font-size: 48px;
 }
 
 .fs-20{
@@ -246,6 +262,10 @@ button{
 
 .lh-26{
     line-height: 26px;
+}
+
+.lh-20{
+    line-height: 20px;
 }
 
 .uppercase{

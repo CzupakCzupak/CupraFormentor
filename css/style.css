@@ -145,3 +145,50 @@
 .try--out-side{
     margin-top: 28rem;
 }
+
+/* Splide car models section */
+
+.splide{
+    padding: 10.4rem 0;
+    background-color:  #F5F5F5;
+}
+
+.heading--tertiary{
+    line-height: 108%;
+}
+
+.splide__slide-models{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0.5;
+    transition: .5s opacity;
+}
+
+.splide__slide-models.is-active{
+    opacity: 1;
+}
+
+.max-w-140{
+    max-width: 14rem;
+}
+
+.splide .splide__pagination{
+    display: none;
+}
+
+.splide-models .splide__arrows .splide__arrow--prev{
+    left:23vw;
+}
+
+.splide-models .splide__arrows .splide__arrow--next{
+    right:23vw;
+}
+
+.splide-models .splide__arrows .splide__arrow{
+    width: 5rem;
+    height: 5rem;
+    border-radius: unset;
+    color: #fff !important;
+    opacity: unset;
+}
