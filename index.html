@@ -12,10 +12,64 @@
     <link rel="stylesheet" href="css/queries.css">
     <!-- Javascript -->
     <script src="js/script.js" defer></script>
+    <script src="splide-4.1.3/splide.min.js" defer></script>
     <title>Cupra main</title>
 </head>
 <body>
-    <header>
+    <header class="header">
+        <div class="container nav--container">
+                <div class="cupra--logo-container">
+                    <img src="img/cupra-logo.svg" alt="Cupra Logo" class="logo--img">
+                </div>
+            <div class="links--container d-f ai-c">
+                    <nav class="main--nav">
+                        <ul class="main--nav-list">
+                            <li><a href="#" class="main-nav-link lh-26 fs-16 fw-300">Samochody</a></li>
+                            <li><a href="#" class="main-nav-link lh-26 fs-16 fw-300">Jazda próbna</a></li>
+                            <li><a href="#" class="main-nav-link lh-26 fs-16 fw-300">Oferta</a></li>
+                            <li><a href="#" class="main-nav-link lh-26 fs-16 fw-300">Salony Cupra</a></li>
+                        </ul>
+                    </nav>
+                    <ul class="btn--container d-f ai-c">
+                        <li><a href="tel:+48585066575" class="nav--tel fw-500 fs-14 lh-26">+48 58 506 65 75</a></li>
+                        <li><a href="#" class="btn btn--white fs-16 fw-400">Zapytaj o ofertę</a></li>
+                        <li><a href="#" class="btn btn--black fs-16 fw-400">Umów jazdę próbną</a></li>
+                    </ul>
+                </div>
+            </div>
     </header>
+    <main>
+        <section class="hero-section">
+            <video class="hero--video" loop muted autoplay>
+                <source src="img/video.mp4" type="video/mp4">
+            </video>
+            <div class="hero--container">
+                <div class="hero--banner">
+                    <p class="hero--head mb-16 fs-20">CUPRA Formentor</p>
+                    <h1 class="heading--primary mb-48 fw-300 white">Wejdź do świata Cupra Poznaj prawdziwą moc i sportowego ducha marki.</h1>
+                    <a href="#" class="btn btn--cream fs-16 fw-400">Ruszaj na jazdę testową</a>
+                </div>
+            </div>
+        </section>
+        <section class="try--out-section">
+            <div class="container">
+                <div class="try--out-columns d-f jc-b">
+                    <div class="try--first-column">
+                        <h1 class="heading--primary mb-16 fw-300 white uppercase">Wypróbuj</h1>
+                        <p class="hero--head fs-20 mb-68 max-w-553">Zobacz, poczuj i przekonaj się, czym jest CUPRA. Poznaj samochody, które są wyjątkowym połączeniem technologii, mocy, elegancji i komfortu.</p>
+                        <img src="img/tryout-front.png" alt="Cupra car front image" class="try--out-front">
+                        <div class="d-f fd-c ai-fs">
+                            <h2 class="heading-secondary uppercase mb-16 fw-300 white">Tylko dla odważnych</h2>
+                            <p class="hero--head mb-32 fs-20 max-w-553">Model CUPRA, który idealnie wpisuje się w DNA marki. Unikalny SUV coupé, wyjątkowy, odważny i innowacyjny – zapewni Ci to, co najlepsze w marce CUPRA.</p>
+                            <a href="#" class="btn btn--cream fs-16 fw-400">Umów jazdę próbną</a>
+                        </div>
+                    </div>
+                        <div class="try--second-column">
+                        <img src="img/tryout-side.png" alt="Cupra car side image" class="try--out-side">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

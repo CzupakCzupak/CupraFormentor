@@ -35,6 +35,7 @@
     font-style: normal;
 }
 
+*,
 *:before,
 *:after {
     box-sizing: border-box;
@@ -59,6 +60,19 @@ body {
 .container{
     max-width: 143.6rem;
     margin: 0 auto;
+    position: relative;
+}
+
+.heading--primary{
+    font-size: 6.0rem;
+    line-height: 107%;
+    max-width: 74.2rem;
+}
+
+.heading-secondary{
+    font-size:4.0rem;
+    line-height: 110%;
+    
 }
 
 
@@ -70,6 +84,11 @@ a{
 
 ul li{
     list-style-type: none;
+}
+
+button{
+    outline: none;
+    font-size:inherit;
 }
 
 .white-svg{
@@ -100,6 +119,10 @@ ul li{
     font-weight: 400;
 }
 
+.fw-300{
+    font-weight: 300;
+}
+
 .mb-64{
     margin-bottom: 6.4rem;
 }
@@ -122,6 +145,18 @@ ul li{
 
 .mb-36{
     margin-bottom: 3.6rem;
+}
+
+.mb-48{
+    margin-bottom: 4.8rem;
+}
+
+.mb-68{
+    margin-bottom: 6.8rem;
+}
+
+.mb-128{
+    margin-bottom: 12.8rem;
 }
 
 .mb-16{
@@ -197,7 +232,22 @@ ul li{
     text-align: center;
 }
 
-.fs-16{
-    font-size: 1.6rem;
+.fs-20{
+    font-size: 20px;
 }
 
+.fs-16{
+    font-size: 16px;
+}
+
+.fs-14{
+    font-size: 14px;
+}
+
+.lh-26{
+    line-height: 26px;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
