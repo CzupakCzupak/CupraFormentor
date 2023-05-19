@@ -271,7 +271,7 @@
 
 .section-amazed{
     padding: 16rem 0 10.4rem;
-    background: #E5E5E5;
+    background: #fff;
 }
 
 .section-amazed .container{
@@ -342,4 +342,142 @@
 .sensation-heading{
     font-size: 4rem;
     line-height: 110%;
+}
+
+/* Section car models */
+
+.section-car-models{
+    padding: 10.4rem 0;
+    background: #fff;
+}
+
+.cars-container{
+    width: 100%;
+    column-gap: 3.2rem;
+    row-gap: 10.8rem;
+    margin-bottom: 8.4rem;
+}
+
+.car-box{
+    background-color: #fff;
+    position: relative;
+    height: 58rem;
+}
+
+.landscape-desc{
+    width: 38.8rem;
+    height: 36.9rem;
+    padding: 4rem 2.4rem;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+}
+
+.btn--round{
+    border-radius: 50rem;
+    line-height: 4.4rem;
+    display: inline-block;
+    height: 4.4rem;
+    background-color: #000;
+    color: #FFFFFF;
+    padding: 0 3.2rem;
+}
+
+.landscape-desc::before,.landscape-desc::after{
+    content: "";
+    height: 1px;
+    width: 34rem;
+    background: #75787B;
+    position: absolute;
+    left: 2.4rem;
+}
+
+.landscape-desc::before{
+    bottom: 0;
+}
+
+.landscape-desc::after{
+    bottom: 12.4rem;
+}
+
+/* Section maps */
+
+.interested-box{
+    max-width: 113.8rem;
+    height: 438px;
+    background-image: url(../img/interested-banner.png);
+    padding:12.8rem 0;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto 10.4rem;
+}
+
+.interested-box::before{
+    position: absolute;
+    content: "";
+    background-color: rgba(0,0,0,0.64);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.position-shadow-box{
+    position: relative;
+    z-index: 2;
+}
+
+.maps-container{
+    max-width: 137.2rem;
+    padding: 0 3.2rem; 
+    margin: 0 auto;
+}
+
+.map-box{
+    max-width: 67rem;
+    height: 64.1rem;
+    position: relative;    
+}
+
+.map-desc{
+    width: 33.8rem;
+    padding: 3.2rem 3.2rem 4rem;
+    background:#fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.map-desc-text{
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    font-weight: 350;
+    color: #000;
+    display: inline-block;
+}
+
+.blue-link{
+    color: #007BFF;
+}
+
+/* footer */
+
+.footer{
+    border-top:1px solid #D5D5D5;
+    width: 100%;
+    height: 11.6rem;
+}
+
+.footer-column{
+    width: 71.3rem;
+    padding: 0 1.6rem 0 3.2rem;
+}
+
+.footer-column:first-child{
+    border-right: 1px solid #DBDBDB;
+}
+
+.icon-margin{
+    margin-right: 3.2rem;
 }

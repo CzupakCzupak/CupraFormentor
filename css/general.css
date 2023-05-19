@@ -163,6 +163,14 @@ button{
     margin-bottom: 12.8rem;
 }
 
+.mb-109{
+    margin-bottom: 10.9rem;
+}
+
+.mb-40{
+    margin-bottom: 4rem;
+}
+
 .mb-104{
     margin-bottom: 10.4rem;
 }
@@ -226,6 +234,10 @@ button{
     display: flex;
 }
 
+.f-w{
+    flex-wrap: wrap;
+}
+
 .ai-c{
     align-items: center;
 }
@@ -236,6 +248,10 @@ button{
 
 .jc-e{
     justify-content: flex-end;
+}
+
+.jc-c{
+    justify-content: center;
 }
 
 .jc-b{
@@ -254,6 +270,10 @@ button{
     gap: 2.4rem;
 }
 
+.gap-32{
+    gap: 3.2rem;
+}
+
 .gap-48{
     gap: 4.8rem;
 }
@@ -262,7 +282,9 @@ button{
     gap: 15.9rem;
 }
 
-
+.mb-65{
+    margin-bottom: 65px;
+}
 
 .ta-c{
     text-align: center;
@@ -292,12 +314,20 @@ button{
     line-height: 26px;
 }
 
+.lh-24{
+    line-height: 24px;
+}
+
 .lh-20{
     line-height: 20px;
 }
 
 .lh-46{
     line-height: 46px;
+}
+
+.lh-48{
+    line-height: 48px;
 }
 
 .uppercase{
@@ -310,4 +340,9 @@ button{
 
 .margin-auto{
     margin: 0 auto;
+}
+
+.max-w-436{
+    max-width: 43.6rem;
+    margin: 0 auto 6.4rem;
 }
