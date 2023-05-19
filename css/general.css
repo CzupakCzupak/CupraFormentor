@@ -155,8 +155,16 @@ button{
     margin-bottom: 6.8rem;
 }
 
+.mt-128{
+    margin-top: 12.8rem;
+}
+
 .mb-128{
     margin-bottom: 12.8rem;
+}
+
+.mb-104{
+    margin-bottom: 10.4rem;
 }
 
 .mb-76{
@@ -175,12 +183,20 @@ button{
     margin-bottom: 1.2rem;
 }
 
+.mb-8{
+    margin-bottom: 0.8rem;
+}
+
 .ml-32{
     margin-left: 3.2rem;
 }
 
 .white{
     color: #fff;
+}
+
+.transparent-white{
+    color: rgba(255,255,255,0.6);
 }
 
 .black{
@@ -234,8 +250,16 @@ button{
     gap: 1.2rem;
 }
 
+.gap-24{
+    gap: 2.4rem;
+}
+
 .gap-48{
     gap: 4.8rem;
+}
+
+.gap-159{
+    gap: 15.9rem;
 }
 
 
@@ -246,6 +270,10 @@ button{
 
 .fs-48{
     font-size: 48px;
+}
+
+.fs-36{
+    font-size: 3.6rem;
 }
 
 .fs-20{
@@ -268,6 +296,18 @@ button{
     line-height: 20px;
 }
 
+.lh-46{
+    line-height: 46px;
+}
+
 .uppercase{
     text-transform: uppercase;
+}
+
+.img-width{
+    width: 100%;
+}
+
+.margin-auto{
+    margin: 0 auto;
 }

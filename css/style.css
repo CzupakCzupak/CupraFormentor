@@ -7,7 +7,7 @@
     height: 8.4rem;
     background: #F5F5F5;
     position: fixed;
-    z-index: 1;
+    z-index: 999;
 }
 
 .nav--container {
@@ -59,6 +59,10 @@
 .btn--black{
     background-color: #000;
     color: #FFF;
+}
+
+.btn--black-cream{
+    border: 1px solid #DBD3CB;
 }
 
 .links--container{
@@ -148,7 +152,7 @@
 
 /* Splide car models section */
 
-.splide{
+.splide-models{
     padding: 10.4rem 0;
     background-color:  #F5F5F5;
 }
@@ -173,7 +177,7 @@
     max-width: 14rem;
 }
 
-.splide .splide__pagination{
+.splide-models .splide__pagination{
     display: none;
 }
 
@@ -189,6 +193,153 @@
     width: 5rem;
     height: 5rem;
     border-radius: unset;
-    color: #fff !important;
+    background-color: #fff;
     opacity: unset;
+}
+
+/* section formentor */
+
+.section-formentor{
+    padding: 10.4rem 0 0;
+    background: #1B1B1B;
+}
+
+.img-text-container{
+    position: relative;
+    margin-bottom: 8rem;
+}
+
+.position-heading{
+    display: inline-block;
+    position: absolute;
+    bottom: 4.8rem;
+    left: 3.2rem;
+}
+
+.max-w-638{
+    max-width: 63.8rem;
+}
+
+.splide-formentor-desc{
+    line-height: 150%;
+    font-weight: 350;
+    color: rgba(255,255,255,0.5);
+}
+
+.pad-32{
+    padding: 0 3.2rem;
+}
+
+.splide-formentor-desc .splide__arrows .splide__arrow--prev{
+    left: 2.4rem;
+}
+
+.splide-formentor-desc .splide__arrows .splide__arrow--next{
+    right: 2.4rem;
+}
+
+.splide-formentor-desc .splide__arrows .splide__arrow{
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 6.4rem;
+    opacity: 1;
+}
+
+.splide-formentor-desc .splide__arrows .splide__arrow:disabled{
+    opacity: 0;
+}
+
+.splide-formentor-desc .splide__pagination{
+    margin: 5.1rem 0;
+    position: unset;
+}
+
+.splide-formentor-desc .splide__pagination .splide__pagination__page.is-active{
+    background: #FFFFFF;
+}
+
+.splide-formentor-desc .splide__pagination .splide__pagination__page{
+    width: 20px;
+    height: 2px;
+    transform: unset;
+    opacity: .6;
+}
+
+/* section amazed */
+
+.section-amazed{
+    padding: 16rem 0 10.4rem;
+    background: #E5E5E5;
+}
+
+.section-amazed .container{
+    padding: 0 3.2rem;
+}
+
+.amazed-row{
+    position: relative;
+}
+
+.splide-amazed{
+    max-width: 78.7rem;
+}
+
+.splide-amazed .splide__pagination{
+    display: none;
+}
+
+.amazed-desc{
+    position: absolute;
+    width: 67rem;
+    background-color: #FFF;
+}
+
+.amazed-desc-right{
+    right:0;
+}
+
+.amazed-desc-left{
+    left:0;
+}
+
+.amazed-desc .margin-auto{
+    max-width: 43.6rem;
+}
+
+.splide-amazed .splide__arrows .splide__arrow{
+    width: 5rem;
+    height: 5rem;
+    border-radius: unset;
+    background-color: #fff;
+    opacity: .6;
+}
+
+.splide-amazed .splide__arrow--prev{
+    left: 2.4rem;
+}
+
+.splide-amazed .splide__arrow--next{
+    right: 10.9rem;
+}
+
+.amazed-row-right .splide__arrow--prev{
+    left: 10.9rem;
+}
+
+.amazed-row-right .splide__arrow--next{
+    right: 2.4rem;
+}
+
+.good-sensation-box{
+    max-width: 113.8rem;
+    height: 438px;
+    background-color: #093E52;
+    padding:12.8rem 0;
+}
+
+.sensation-heading{
+    font-size: 4rem;
+    line-height: 110%;
 }
