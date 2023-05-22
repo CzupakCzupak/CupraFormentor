@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/general.css">
     <style>
+
+        html{
+            font-size: 62.5%;
+        }
         .slide-container{
             margin: 0 auto;
             max-width: 1200px;
@@ -73,10 +78,199 @@
         .ai-c{
             align-items: center;
         }
+
+        .car-select-btn{
+            max-width: 55.3rem;
+            height: auto;
+            position: relative;
+            z-index: 80;
+            height: 14.7rem;
+        }
+
+        .car-select-option{
+            width: 100%;
+            position: relative;
+        }
+
+        .car-select-img{
+            height: 13.9rem;
+            position: absolute;
+            top: 3px;
+            left: -5rem;
+        }
+
+        .car-option-box{
+            visibility: hidden;
+            opacity: 0;
+            width:50.3rem;
+            border: 1px solid #D5D5D5;
+            padding: 6.2rem 0 6.2rem 25.1rem;
+            margin-left: auto;
+            position: relative;
+            cursor: pointer;
+            order: 0;
+            transition:.5s opacity,visibility;
+            background-color: #f5f5f5;
+        }
+
+        .car-option-box{
+            border-top:unset;
+        }
+
+        .lh-21{
+            line-height: 2.1rem;
+        }
+
+        .car-option-title{
+            display: inline-block;
+        }
+
+        .car-option-active,.first-option{
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .first-option{
+            order: -1;
+            border-top: 1px solid #D5D5D5;
+        }
+
+        body{
+            padding: 10px;
+        }
+
+        .arrow-down{
+            position: absolute;
+            top: 6.9rem;
+            right: 2rem;
+            transform: .3s all;
+            z-index: 80;
+        }
+
+        .car-select-active .arrow-down{
+            transform: rotate(180deg);
+        }
+
+        .car-select-pos{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
     </style>
 </head>
 <body>
-    <div class="slide-container">
+    <div class="car-select-btn">
+        <input type="hidden" value="Cupra Formentor" class="cta-hidden">
+        <div class="car-select-pos">
+            <img src="img/arrow-down.svg" alt="Arrow down" class="arrow-down">
+            <div class="car-select-option d-f fd-c">
+                <div class="car-option-box first-option" data-name="Cupra Formentor">
+                    <img src="img/cta-formentor.png" alt="" class="car-select-img">
+                    <p class="car-option-title fs-16 fw-400 lh-21">Cupra Formentor</p>
+                </div>
+                <div class="car-option-box" data-name="Cupra Leon">
+                    <img src="img/cta-formentor.png" alt="" class="car-select-img">
+                    <p class="car-option-title fs-16 fw-400 lh-21">Cupra Leon</p>
+                </div>
+                <div class="car-option-box" data-name="Cupra Leon Sportstourer">
+                    <img src="img/cta-formentor.png" alt="" class="car-select-img">
+                    <p class="car-option-title fs-16 fw-400 lh-21">Cupra Leon Sportstourer</p>
+                </div>
+                <div class="car-option-box" data-name="Cupra Ateca">
+                    <img src="img/cta-formentor.png" alt="" class="car-select-img">
+                    <p class="car-option-title fs-16 fw-400 lh-21">Cupra Ateca</p>
+                </div>
+                <div class="car-option-box" data-name="Nowa Cupra Born">
+                    <img src="img/cta-formentor.png" alt="" class="car-select-img">
+                    <p class="car-option-title fs-16 fw-400 lh-21">Nowa Cupra Born</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p>gay</p>
+    <script>
+        const select = document.querySelector('.car-select-btn')
+        const selectOptions = document.querySelectorAll('.car-option-box')
+        const body = document.body
+        const ctaHidden = document.querySelector('.cta-hidden')
+        
+        body.addEventListener('click', closeList)
+        select.addEventListener('click', listActive)
+        // selectOptions.forEach(item =>{
+        //     item.addEventListener('click',changeAttr)
+        // })
+
+        function closeList(e){
+            if(!e.target.classList.contains('car-select-btn') && !e.target.closest('.car-select-btn')){
+                select.classList.remove('car-select-active')
+                selectOptions.forEach(item => {
+                    item.classList.remove('car-option-active')
+                })
+                flag = 0
+            }
+        }
+        
+        let flag = 0
+        function listActive(e){
+            select.classList.add('car-select-active')
+            selectOptions.forEach(item => {
+                item.classList.add('car-option-active')
+            })
+            if(flag > 0){
+                const parentEl = e.target.closest('.car-option-box');
+                const value = parentEl.dataset.name
+                ctaHidden.value = value
+                select.classList.remove('car-select-active')
+                selectOptions.forEach(item => {
+                    item.classList.remove('car-option-active')
+                    item.classList.remove('first-option')
+                })
+                parentEl.classList.add('first-option')
+                flag = 0
+            }else{
+                flag++
+            }
+        }
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="slide-container">
         <button class="prev slide-btn" data-name="prev">Previous</button>
         <div class="d-f fd-c ai-c">
             <div class="slider">
@@ -164,6 +358,6 @@
 
 
         window.onload = slider
-    </script>
+    </script> -->
 </body>
 </html>

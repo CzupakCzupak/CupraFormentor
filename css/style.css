@@ -7,7 +7,7 @@
     height: 8.4rem;
     background: #F5F5F5;
     position: fixed;
-    z-index: 999;
+    z-index: 99;
 }
 
 .nav--container {
@@ -344,6 +344,182 @@
     line-height: 110%;
 }
 
+/* Section cta */
+
+.section-cta{
+    padding: 10.4rem 0;
+    background: #F5F5F5;
+}
+
+.cta-container{
+    max-width: 67rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.cta-text-container{
+    width: 55.3rem;
+    margin: 0 auto;
+}
+
+.cta-text{
+    border: none;
+    background-color: #f5f5f5;
+    padding: 1.2rem;
+    border-bottom: 1px solid #D5D5D5;
+    margin-bottom: 2.4rem;
+}
+
+.cta-text::placeholder,.cta-text{
+    font-family: "CUPRA";
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    font-weight: 400;
+    color: #242221;
+}
+
+.required{
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 21px;
+    color: #000;
+}
+
+.cta-label{
+    font-weight: 350;
+    font-size: 1.3rem;
+    line-height: 2.1rem;
+    color:#000000;
+}
+
+.cta-link{
+    text-decoration: underline;
+    color: #000;
+}
+
+.cta-checkbox-label{
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+}
+
+.cta-checkbox {
+
+    cursor: pointer;
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    /* Remove most all native input styles */
+    appearance: none;
+    /* For iOS < 15 */
+    background-color: #FFFFFF;
+    font: inherit;
+    color: currentColor;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #D5D5D5;
+    display: grid;
+    place-content: center;
+}
+    
+.cta-checkbox::before {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    margin: .5rem;
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    background-color: #fff;    
+}
+    
+.cta-checkbox:checked::before {
+    transform: scale(1);
+    background-color: #75787B;
+}
+
+.car-select-btn{
+    max-width: 55.3rem;
+    height: auto;
+    position: relative;
+    z-index: 80;
+    height: 14.7rem;
+}
+
+.car-select-option{
+    width: 100%;
+    position: relative;
+}
+
+.car-select-img{
+    height: 13.9rem;
+    position: absolute;
+    top: 3px;
+    left: -5rem;
+}
+
+.car-option-box{
+    opacity: 0;
+    visibility: hidden;
+    width:50.3rem;
+    border: 1px solid #D5D5D5;
+    padding: 6.2rem 0 6.2rem 25.1rem;
+    margin-left: auto;
+    position: relative;
+    cursor: pointer;
+    order: 0;
+    transition-property: visibility, opacity;
+    transition-duration: .5s;
+    background-color: #f5f5f5;
+}
+
+.car-option-box{
+    border-top:unset;
+}
+
+.lh-21{
+    line-height: 2.1rem;
+}
+
+.car-option-title{
+    display: inline-block;
+}
+
+.car-option-active,.first-option{
+    visibility: visible;
+    opacity: 1;
+}
+
+.first-option{
+    order: -1;
+    border-top: 1px solid #D5D5D5;
+}
+
+.arrow-down{
+    position: absolute;
+    top: 6.9rem;
+    right: 2rem;
+    transform: .3s all;
+    z-index: 80;
+}
+
+.car-select-active .arrow-down,.offer-select.car-select-active .arrow-down{
+    transform: rotate(180deg);
+}
+
+
+.car-select-pos{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+input[type=submit]{
+    font-family: "CUPRA";
+}
+
 /* Section car models */
 
 .section-car-models{
@@ -383,14 +559,15 @@
     padding: 0 3.2rem;
 }
 
-.landscape-desc::before,.landscape-desc::after{
-    content: "";
-    height: 1px;
-    width: 34rem;
-    background: #75787B;
+.btn--round-borders{
     position: absolute;
-    left: 2.4rem;
+    bottom: 0;
+    padding: 4rem 0;
+    border-bottom:1px solid #75787B;
+    border-top:1px solid #75787B;
+    width: calc(100% - 48px);
 }
+
 
 .landscape-desc::before{
     bottom: 0;
@@ -432,6 +609,12 @@
     max-width: 137.2rem;
     padding: 0 3.2rem; 
     margin: 0 auto;
+}
+
+.map{
+    width: 67rem;
+    height: 43.8rem;
+    border: unset;
 }
 
 .map-box{
@@ -480,4 +663,26 @@
 
 .icon-margin{
     margin-right: 3.2rem;
+}
+
+/* Offer section */
+
+.section-offer{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    transform: translateX(-100%);
+    top: 8.4rem;
+    left: 0;
+    z-index: 98;
+    background-color: #F5F5F5;
+    transition: .5s transform;
+}
+
+.section-offer.offer-active{
+    transform: translateX(0);
+}
+
+.cls-offer:hover{
+    cursor: pointer;
 }

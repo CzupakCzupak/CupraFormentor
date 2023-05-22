@@ -80,6 +80,7 @@ body {
 a{
     color: #fff;
     text-decoration: none;
+    cursor: pointer;
 }
 
 ul li{
@@ -137,6 +138,10 @@ button{
 
 .mb-24{
     margin-bottom: 2.4rem;
+}
+
+.mb-20{
+    margin-bottom: 2rem;
 }
 
 .mb-32{
@@ -212,7 +217,7 @@ button{
 }
 
 .new-black{
-    color: #190F14;
+    color: #242221;
 }
 
 .orange{
@@ -264,6 +269,10 @@ button{
 
 .gap-12{
     gap: 1.2rem;
+}
+
+.gap-16{
+    gap: 1.6rem;
 }
 
 .gap-24{
@@ -346,3 +355,4 @@ button{
     max-width: 43.6rem;
     margin: 0 auto 6.4rem;
 }
+
