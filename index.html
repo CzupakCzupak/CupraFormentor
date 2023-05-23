@@ -20,22 +20,35 @@
     <header class="header">
         <div class="container nav--container">
                 <div class="cupra--logo-container">
-                    <img src="img/cupra-logo.svg" alt="Cupra Logo" class="logo--img">
+                    <a href="#">
+                        <img src="img/cupra-logo.svg" alt="Cupra Logo" class="logo--img">
+                    </a>
                 </div>
-            <div class="links--container d-f ai-c">
-                    <nav class="main--nav">
-                        <ul class="main--nav-list">
-                            <li><a href="#" class="main-nav-link lh-26 fs-16 fw-300">Samochody</a></li>
-                            <li><a href="#" class="main-nav-link lh-26 fs-16 fw-300">Jazda próbna</a></li>
-                            <li><a href="#" class="main-nav-link lh-26 fs-16 fw-300">Oferta</a></li>
-                            <li><a href="#" class="main-nav-link lh-26 fs-16 fw-300">Salony Cupra</a></li>
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="open-icon toggle">
+                    <path d="M0 0H20V2H0V0Z" fill="#242221"/>
+                    <path d="M0 7H20V9H0V7Z" fill="#242221"/>
+                    <path d="M0 14H20V16H0V14Z" fill="#242221"/>
+                </svg>
+            <div class="nav-absolute">
+                <div class="links--container d-f ai-c">
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="close-icon toggle">
+                        <path d="M1.46402 0.0505371L0.0498047 1.46475L3.58542 5.00036L0.049814 8.53597L1.46403 9.95018L4.99963 6.41458L8.53509 9.95003L9.9493 8.53582L6.41385 5.00036L9.94931 1.4649L8.5351 0.050688L4.99963 3.58615L1.46402 0.0505371Z" fill="#242221"/>
+                        </svg>
+                        
+                        <nav class="main--nav">
+                            <ul class="main--nav-list">
+                                <li><a href="#cars" class="main-nav-link lh-26 fs-16 fw-300">Samochody</a></li>
+                                <li><a href="#cta" class="main-nav-link lh-26 fs-16 fw-300">Jazda próbna</a></li>
+                                <li><a href="#offer" class="main-nav-link lh-26 fs-16 fw-300 ask-offer">Oferta</a></li>
+                                <li><a href="#map" class="main-nav-link lh-26 fs-16 fw-300">Salony Cupra</a></li>
+                            </ul>
+                        </nav>
+                        <ul class="btn--container d-f ai-c">
+                            <li><a href="tel:+48585066575" class="nav--tel fw-500 fs-14 lh-26">+48 58 506 65 75</a></li>
+                            <li><a href="#offer" class="btn btn--white fs-16 fw-400 ask-offer">Zapytaj o ofertę</a></li>
+                            <li><a href="#cta" class="btn btn--black fs-16 fw-400">Umów jazdę próbną</a></li>
                         </ul>
-                    </nav>
-                    <ul class="btn--container d-f ai-c">
-                        <li><a href="tel:+48585066575" class="nav--tel fw-500 fs-14 lh-26">+48 58 506 65 75</a></li>
-                        <li><a href="" class="btn btn--white fs-16 fw-400 ask-offer">Zapytaj o ofertę</a></li>
-                        <li><a href="#cta" class="btn btn--black fs-16 fw-400">Umów jazdę próbną</a></li>
-                    </ul>
+                    </div>
                 </div>
             </div>
     </header>
@@ -47,8 +60,8 @@
             <div class="hero--container">
                 <div class="hero--banner">
                     <p class="hero--head mb-16 fs-20">CUPRA Formentor</p>
-                    <h1 class="heading--primary mb-48 fw-300 white">Wejdź do świata Cupra Poznaj prawdziwą moc i sportowego ducha marki.</h1>
-                    <a href="#" class="btn btn--cream fs-16 fw-400">Ruszaj na jazdę testową</a>
+                    <h1 class="heading--primary mb-48 fw-300 white">Wejdź do świata Cupra Poznaj prawdziwą moc<br> i sportowego ducha marki.</h1>
+                    <a href="#cta" class="btn btn--cream fs-16 fw-400">Ruszaj na jazdę testową</a>
                 </div>
             </div>
         </section>
@@ -62,7 +75,7 @@
                         <div class="d-f fd-c ai-fs">
                             <h2 class="heading-secondary uppercase mb-16 fw-300 white">Tylko dla odważnych</h2>
                             <p class="hero--head mb-32 fs-20 max-w-553">Model CUPRA, który idealnie wpisuje się w DNA marki. Unikalny SUV coupé, wyjątkowy, odważny i innowacyjny – zapewni Ci to, co najlepsze w marce CUPRA.</p>
-                            <a href="#" class="btn btn--cream fs-16 fw-400">Umów jazdę próbną</a>
+                            <a href="#cta" class="btn btn--cream fs-16 fw-400">Umów jazdę próbną</a>
                         </div>
                     </div>
                         <div class="try--second-column">
@@ -71,12 +84,12 @@
                 </div>
             </div>
         </section>
-        <section class="splide splide-models">
-            <div class="splide__track">
+        <section class="splide splide-models ta-c" id="cars">
+            <div class="splide__track mb-48">
                 <ul class="splide__list">
                     <li class="splide__slide splide__slide-models">
                         <h3 class="heading--tertiary mb-76 fs-48 fw-400 ta-c"><span class="uppercase">Cupra </span>Formentor</h3>
-                        <img src="img/cupraformentor.png" alt="Cupra formentor VZ image" class="mb-38">
+                        <img src="img/cupraformentor.png" class="slide-img" alt="Cupra formentor VZ image" class="mb-38">
                         <p class="fs-14 fw-300 lh-20 mb-48 ta-c">Maksymalna prędkość: 220 KM/H Moc silnika: 150-190 KM</p>
                         <div class="d-f jc-c ai-fs gap-48">
                             <p class="fs-14 fw-300 lh-20 mb-48 ta-c max-w-140">Dostępny w leasingu z 0% opłaty własnej</p>
@@ -86,7 +99,7 @@
                     </li>
                     <li class="splide__slide splide__slide-models">
                         <h3 class="heading--tertiary mb-76 fs-48 fw-400 ta-c"><span class="uppercase">Cupra </span>Formentor VZ</h3>
-                        <img src="img/cupraformentor.png" alt="Cupra formentor VZ image" class="mb-38">
+                        <img src="img/cupraformentor.png" class="slide-img" alt="Cupra formentor VZ image" class="mb-38">
                         <p class="fs-14 fw-300 lh-20 mb-48 ta-c">Maksymalna prędkość: 250 KM/H Moc silnika: 245 - 310 KM</p>
                         <div class="d-f jc-c ai-fs gap-48">
                             <p class="fs-14 fw-300 lh-20 mb-48 ta-c max-w-140">Dostępny w leasingu z 0% opłaty własnej</p>
@@ -96,7 +109,7 @@
                     </li>
                     <li class="splide__slide splide__slide-models">
                         <h3 class="heading--tertiary mb-76 fs-48 fw-400 ta-c"><span class="uppercase">Cupra </span>Ateca</h3>
-                        <img src="img/ateca.png" alt="Cupra formentor VZ image" class="mb-38">
+                        <img src="img/ateca.png" class="slide-img" alt="Cupra formentor VZ image" class="mb-38">
                         <p class="fs-14 fw-300 lh-20 mb-48 ta-c">Maksymalna prędkość: 247 KM/H Moc silnika: 300 KM</p>
                         <div class="d-f jc-c ai-fs gap-48">
                             <p class="fs-14 fw-300 lh-20 mb-48 ta-c max-w-140">Dostępny w leasingu z 0% opłaty własnej</p>
@@ -106,7 +119,7 @@
                     </li>
                     <li class="splide__slide splide__slide-models">
                         <h3 class="heading--tertiary mb-76 fs-48 fw-400 ta-c">Nowa <span class="uppercase">Cupra </span>Born</h3>
-                        <img src="img/born.png" alt="Cupra formentor VZ image" class="mb-38">
+                        <img src="img/born.png" class="slide-img" alt="Cupra formentor VZ image" class="mb-38">
                         <p class="fs-14 fw-300 lh-20 mb-48 ta-c">Akumulator 58 kWh do 204KM²</p>
                         <div class="d-f jc-c ai-fs gap-48">
                             <p class="fs-14 fw-300 lh-20 mb-48 ta-c max-w-140">Dostępny w leasingu z 0% opłaty własnej</p>
@@ -116,7 +129,7 @@
                     </li>
                     <li class="splide__slide splide__slide-models">
                         <h3 class="heading--tertiary mb-76 fs-48 fw-400 ta-c"><span class="uppercase">Cupra </span>Leon</h3>
-                        <img src="img/leon.png" alt="Cupra formentor VZ image" class="mb-38">
+                        <img src="img/leon.png" class="slide-img" alt="Cupra formentor VZ image" class="mb-38">
                         <p class="fs-14 fw-300 lh-20 mb-48 ta-c">Maksymalna prędkość: 213-250 KM/H Moc silnika: 150-300 KM</p>
                         <div class="d-f jc-c ai-fs gap-48">
                             <p class="fs-14 fw-300 lh-20 mb-48 ta-c max-w-140">Dostępny w leasingu z 0% opłaty własnej</p>
@@ -126,7 +139,7 @@
                     </li>
                     <li class="splide__slide splide__slide-models">
                         <h3 class="heading--tertiary mb-76 fs-48 fw-400 ta-c"><span class="uppercase">Cupra </span>Leon SP</h3>
-                        <img src="img/sportstourer.png" alt="Cupra formentor VZ image" class="mb-38">
+                        <img src="img/sportstourer.png" class="slide-img" alt="Cupra formentor VZ image" class="mb-38">
                         <p class="fs-14 fw-300 lh-20 mb-48 ta-c">Maksymalna prędkość: 218-250 KM/H Moc silnika: 150-310 KM</p>
                         <div class="d-f jc-c ai-fs gap-48">
                             <p class="fs-14 fw-300 lh-20 mb-48 ta-c max-w-140">Dostępny w leasingu z 0% opłaty własnej</p>
@@ -136,6 +149,7 @@
                     </li>
                 </ul>
             </div>
+            <a href="#cta" class="btn btn--black fs-16 lh-48 fw-400">Umów jazdę próbną</a>
         </section>
         <section class="section-formentor">
             <div class="container">
@@ -143,62 +157,62 @@
                     <img src="img/cuprahighway.png" alt="Cupra formentor on highway" class="img-width">
                     <h1 class="heading--primary uppercase position-heading fw-300 white">CUPRA FORMENTOR</h1>
                 </div>
-                <div class="d-f fd-c pad-32">
-                    <div class="d-f ai-fs jc-b mb-64">
+                <div class="d-f fd-c pad-32 ">
+                    <div class="d-f ai-fs jc-b mb-64 btn-text">
                         <div>
                             <h1 class="heading--primary uppercase fw-300 white mb-16">Daj się uwieźć</h1>
                             <p class="hero--head fs-20 max-w-638">Dotknij najlepszych materiałów, spróbuj prawdziwych emocji. Poprowadź wybrany model CUPRA, aby na nowo móc zdefiniować czym jest wyjątkowy samochód.</p>
                         </div>
-                        <div class="d-f gap-24">
-                            <a href="#" class="btn btn--black-cream fs-16 fw-400">Umów jazdę próbną</a>
+                        <div class="d-f gap-24 btns-price ta-c">
+                            <a href="#cta" class="btn btn--black-cream fs-16 fw-400">Umów jazdę próbną</a>
                             <a href="#" class="btn btn--cream fs-16 fw-400">Pobierz cennik</a>
                         </div>
                     </div>
                     <div class="splide splide-formentor-desc">
                         <div class="splide__track">
                               <ul class="splide__list">
-                                  <li class="splide__slide">
+                                  <li class="splide__slide d-f fd-c">
                                     <img src="img/splide-formentor-1.png" alt="First slide photo" class="mb-24">
-                                    <p class="hero--head fs-20 white mb-8">Tyle mocy ile potrzebujesz</p>
+                                    <p class="hero--head fs-20 white mb-8 lh-120p">Tyle mocy ile potrzebujesz</p>
                                     <p class="splide-formentor-desc fs-16 ">Cupra <span class="fw-500">Formentor</span> oferuje Ci szeroką gamę wersji napędu poczynając od 1.5 TSI o mocy 150 KM, na 1.4 e-HYBRID o mocy 204KM kończąc. Najwyższymi parametrami cechuje się wersja <span class="fw-500">Formentor VZ</span>, którą  napędza 2-litrowy silnik o mocy 310 KM.</p>
                                   </li>
-                                  <li class="splide__slide">
+                                  <li class="splide__slide d-f fd-c">
                                     <img src="img/splide-formentor-2.png" alt="First slide photo" class="mb-24">
-                                    <p class="hero--head fs-20 white mb-8">Technologia dostosowana do Ciebie.</p>
+                                    <p class="hero--head fs-20 white mb-8 lh-120p">Technologia dostosowana do Ciebie.</p>
                                     <p class="splide-formentor-desc fs-16 ">Liczne funkcje zapewniające kierowcy łączność z samochodem oraz wzbogacające wrażenia z jazdy.</p>
                                   </li>
-                                  <li class="splide__slide">
+                                  <li class="splide__slide d-f fd-c">
                                     <img src="img/splide-formentor-3.png" alt="First slide photo" class="mb-24">
-                                    <p class="hero--head fs-20 white mb-8">Odważny design.</p>
+                                    <p class="hero--head fs-20 white mb-8 lh-120p">Odważny design.</p>
                                     <p class="splide-formentor-desc fs-16 ">Wyjątkowo elegancka, wyrzeźbiona linia nadwozia. Dynamiczny spojler i drapieżny przód z powiększonymi wlotami powietrza.h</p>
                                   </li>
-                                  <li class="splide__slide">
+                                  <li class="splide__slide d-f fd-c">
                                     <img src="img/splide-formentor-4.png" alt="First slide photo" class="mb-24">
-                                    <p class="hero--head fs-20 white mb-8">Doskonała siła hamowania</p>
+                                    <p class="hero--head fs-20 white mb-8 lh-120p">Doskonała siła hamowania</p>
                                     <p class="splide-formentor-desc fs-16 ">Przykuwające wzrok wentylowane hamulce tarczowe Brembo w kolorze miedzi CUPRA.
                                     </p>
                                   </li>
-                                  <li class="splide__slide">
+                                  <li class="splide__slide d-f fd-c">
                                     <img src="img/splide-formentor-5.png" alt="First slide photo" class="mb-24">
-                                    <p class="hero--head fs-20 white mb-8">Aerodynamika na najwyższym poziomie.
+                                    <p class="hero--head fs-20 white mb-8 lh-120p">Aerodynamika na najwyższym poziomie.
                                     </p>
                                     <p class="splide-formentor-desc fs-16 ">Dopasowany spojler. Płynna, opływowa, wyrzeźbiona linia nadwozia.
                                     </p>
                                   </li>
-                                  <li class="splide__slide">
+                                  <li class="splide__slide d-f fd-c">
                                     <img src="img/splide-formentor-6.png" alt="First slide photo" class="mb-24">
-                                    <p class="hero--head fs-20 white mb-8">Unikalny dźwięk silnika.
+                                    <p class="hero--head fs-20 white mb-8 lh-120p">Unikalny dźwięk silnika.
                                     </p>
                                     <p class="splide-formentor-desc fs-16 ">4 końcówki układu wydechowego w matowo-czarnym kolorze zapewniają wzmocniony, wyrazisty dźwięk „CUPRA”.</p>
                                   </li>
-                                  <li class="splide__slide">
+                                  <li class="splide__slide d-f fd-c">
                                     <img src="img/splide-formentor-7.png" alt="First slide photo" class="mb-24">
-                                    <p class="hero--head fs-20 white mb-8">Czysta moc</p>
+                                    <p class="hero--head fs-20 white mb-8 lh-120p">Czysta moc</p>
                                     <p class="splide-formentor-desc fs-16 ">Włącz tryb CUPRA i poczuj maksymalną moc i adrenalinę.</p>
                                   </li>
-                                  <li class="splide__slide">
+                                  <li class="splide__slide d-f fd-c">
                                     <img src="img/splide-formentor-8.png" alt="First slide photo" class="mb-24">
-                                    <p class="hero--head fs-20 white mb-8">Pełna kontrola</p>
+                                    <p class="hero--head fs-20 white mb-8 lh-120p">Pełna kontrola</p>
                                     <p class="splide-formentor-desc fs-16">Na Wirtualnym Kokpicie wybierz profil jazdy CUPRA. Dopasowany do sportowych osiągów i wrażeń.
                                     </p>
                                   </li>
@@ -215,13 +229,13 @@
                         <div class="splide__track">
                               <ul class="splide__list">
                                   <li class="splide__slide">
-                                    <img src="img/splide-amazed1.png" alt="Interior car photo 1">
+                                    <img src="img/splide-amazed1.png" class="img-amazed" alt="Interior car photo 1">
                                   </li>
                                   <li class="splide__slide">
-                                    <img src="img/splide-amazed2.png" alt="Interior car photo 2">
+                                    <img src="img/splide-amazed2.png" class="img-amazed" alt="Interior car photo 2">
                                   </li>
                                   <li class="splide__slide">
-                                    <img src="img/splide-amazed3.png" alt="Interior car photo 3">
+                                    <img src="img/splide-amazed3.png" class="img-amazed" alt="Interior car photo 3">
                                   </li>
                               </ul>
                         </div>
@@ -230,31 +244,31 @@
                         <div class="margin-auto">
                             <p class="fs-16 lh-26 fw-300 black mb-8">Technologia</p>
                             <h3 class="amazed-desc-heading fs-36 lh-46 fw-300 mb-48">Poczuj pełną wolność jazdy dzięki licznym innowacjom.</h3>
-                            <a href="#" class="btn btn--black fs-16 fw-400 mb-64">Umów jazdę próbną</a>
+                            <a href="#cta" class="btn btn--black fs-16 fw-400 mb-64">Umów jazdę próbną</a>
                         </div>
                     </div>
                 </div>
                 <div class="amazed-row amazed-row-right d-f ai-fs jc-e">
-                    <div class="splide splide-amazed">
-                        <div class="splide__track">
-                              <ul class="splide__list">
-                                  <li class="splide__slide">
-                                    <img src="img/splide-amazed4.png" alt="Exterior car photo 1">
-                                  </li>
-                                  <li class="splide__slide">
-                                    <img src="img/splide-amazed5.png" alt="Exterior car photo 2">
-                                  </li>
-                                  <li class="splide__slide">
-                                    <img src="img/splide-amazed6.png" alt="Exterior car photo 3">
-                                  </li>
-                              </ul>
-                        </div>
-                    </div>
                     <div class="amazed-desc amazed-desc-left">
                         <div class="margin-auto">
                             <p class="fs-16 lh-26 fw-300 black mb-8">Potęga Designu</p>
                             <h3 class="amazed-desc-heading fs-36 lh-46 fw-300 mb-48">Crossover emanujący gracją, dynamizmem i czystym wyrafinowaniem.</h3>
-                            <a href="#" class="btn btn--black fs-16 fw-400 mb-64">Umów jazdę próbną</a>
+                            <a href="#cta" class="btn btn--black fs-16 fw-400 mb-64">Umów jazdę próbną</a>
+                        </div>
+                    </div>
+                    <div class="splide splide-amazed">
+                        <div class="splide__track">
+                              <ul class="splide__list">
+                                  <li class="splide__slide">
+                                    <img src="img/splide-amazed4.png" class="img-amazed" alt="Exterior car photo 1">
+                                  </li>
+                                  <li class="splide__slide">
+                                    <img src="img/splide-amazed5.png" class="img-amazed" alt="Exterior car photo 2">
+                                  </li>
+                                  <li class="splide__slide">
+                                    <img src="img/splide-amazed6.png" class="img-amazed" alt="Exterior car photo 3">
+                                  </li>
+                              </ul>
                         </div>
                     </div>
                 </div>
@@ -263,13 +277,13 @@
                         <div class="splide__track">
                               <ul class="splide__list">
                                   <li class="splide__slide">
-                                    <img src="img/splide-amazed7.png" alt="Interior car photo 4">
+                                    <img src="img/splide-amazed7.png" class="img-amazed" alt="Interior car photo 4">
                                   </li>
                                   <li class="splide__slide">
-                                    <img src="img/splide-amazed8.png" alt="Interior car photo 5">
+                                    <img src="img/splide-amazed8.png" class="img-amazed" alt="Interior car photo 5">
                                   </li>
                                   <li class="splide__slide">
-                                    <img src="img/splide-amazed9.png" alt="Interior car photo 6">
+                                    <img src="img/splide-amazed9.png" class="img-amazed" alt="Interior car photo 6">
                                   </li>
                               </ul>
                         </div>
@@ -278,15 +292,17 @@
                         <div class="margin-auto">
                             <p class="fs-16 lh-26 fw-300 black mb-8">Design wnętrza</p>
                             <h3 class="amazed-desc-heading fs-36 lh-46 fw-300 mb-48">Idealny komfort. Unikalny wystrój wnętrza stworzony w stylu CUPRY.</h3>
-                            <a href="#" class="btn btn--black fs-16 fw-400 mb-64">Umów jazdę próbną</a>
+                            <a href="#cta" class="btn btn--black fs-16 fw-400 mb-64">Umów jazdę próbną</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="good-sensation-box margin-auto ta-c">
-                <p class="fs-16 lh-26 fw-300 transparent-white mb-16">Jazda próbna</p>
-                <h4 class="sensation-heading white fw-400 mb-48">Gotowy na mocne wrażenia?</h4>
-                <a href="#" class="btn btn--cream fs-16 fw-400">Umów jazdę próbną</a>
+            <div class="good-sensation-container">
+                <div class="good-sensation-box margin-auto ta-c">
+                    <p class="fs-16 lh-26 fw-300 transparent-white mb-16">Jazda próbna</p>
+                    <h4 class="sensation-heading white fw-400 mb-48">Gotowy na mocne wrażenia?</h4>
+                    <a href="#" class="btn btn--cream fs-16 fw-400">Umów jazdę próbną</a>
+                </div>
             </div>
         </section>
         <section class="section-cta" id="cta">
@@ -370,7 +386,7 @@
                 </div>
                 <div class="cars-container d-f f-w jc-c">
                     <div class="car-box">
-                        <img src="img/formentorlandscape.png" alt="Cupra formentor on landscape">
+                        <img src="img/formentorlandscape.png" class="car-box-img" alt="Cupra formentor on landscape">
                         <div class="landscape-desc">
                             <h4 class="fs-36 black fw-300 mb-16">Cupra Formentor</h4>
                             <p class="fs-16 lh-26 fw-300 black">Wyrazista i pełna adrenaliny. Nowa CUPRA Formentor łączy odważny design crossovera coupé z mocą 310 KM.</p>
@@ -380,7 +396,7 @@
                         </div>
                     </div>
                     <div class="car-box">
-                        <img src="img/leonlandscape.png" alt="Cupra Leon on landscape">
+                        <img src="img/leonlandscape.png" class="car-box-img" alt="Cupra Leon on landscape">
                         <div class="landscape-desc">
                             <h4 class="fs-36 black fw-300 mb-16">CUPRA Leon</h4>
                             <p class="fs-16 lh-26 fw-300 black">Hybrydowe połączenie silnika benzynowego i elektrycznego o mocy 245 KM z maksymalnym zasiegiem 52 km.
@@ -391,7 +407,7 @@
                         </div>
                     </div>
                     <div class="car-box">
-                        <img src="img/sportstourerlandscape.png" alt="Cupra Leon Sportstourer on landscape">
+                        <img src="img/sportstourerlandscape.png" class="car-box-img" alt="Cupra Leon Sportstourer on landscape">
                         <div class="landscape-desc">
                             <h4 class="fs-36 black fw-300 mb-16">CUPRA Leon Sportstourer</h4>
                             <p class="fs-16 lh-26 fw-300 black">Rodzinna i sportowa - dynamiczna i stylowa hybryda plug-in w wersji kombi z bagażnikiem o pojemności 470l.</p>
@@ -401,7 +417,7 @@
                         </div>
                     </div>
                     <div class="car-box">
-                        <img src="img/atecalandscape.png" alt="Cupra Ateca on landscape">
+                        <img src="img/atecalandscape.png" class="car-box-img" alt="Cupra Ateca on landscape">
                         <div class="landscape-desc">
                             <h4 class="fs-36 black fw-300 mb-16">Cupra Ateca</h4>
                             <p class="fs-16 lh-26 fw-300 black">Nowe oblicze dynamicznego SUV-a. Sportowe akcenty, detale w kolorze ciemnego aluminium i wyrazista maska z przetłoczeniami, pod którą kryje się moc 300 KM.</p>
@@ -411,7 +427,7 @@
                         </div>
                     </div>
                     <div class="car-box">
-                        <img src="img/bornlandscape.png" alt="Cupra Born on landscape">
+                        <img src="img/bornlandscape.png" class="car-box-img" alt="Cupra Born on landscape">
                         <div class="landscape-desc">
                             <h4 class="fs-36 black fw-300 mb-16">Nowa CUPRA Born</h4>
                             <p class="fs-16 lh-26 fw-300 black">Całkowicie elektryczna i drapieżnie sportowa. Nowa CUPRA Born z zasięgiem nawet do 427 km i przyspieszeniem 7,3 s sprawi, że poczujesz jazdę na nowo.
@@ -427,45 +443,47 @@
             </div>
         </section>
         <section class="section-maps mb-104">
-            <div class="interested-box ta-c">
-                <div class="position-shadow-box">
-                    <p class="fs-16 lh-26 fw-300 white mb-16">Zainteresowany?</p>
-                    <h4 class="sensation-heading white fw-400 mb-48">Zapytaj o indywidualną ofertę</h4>
-                    <a href="#" class="btn btn--cream fs-16 fw-400">Napisz do nas</a>
-                </div>
-            </div>
-            <div class="max-w-436">
-                <p class="fs-16 lh-26 fw-300 black ta-c">Lokalizacja i kontakt</p>
-                <h4 class="fs-36 black fw-300 mb-64 ta-c max-w-436 margin-auto">Odwiedź nas i przekonaj się sam, czym jest CUPRA</h4>
-            </div>
-            <div class="maps-container d-f gap-32">
-                <div class="map-box">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2326.5035833539273!2d18.533226277671385!3d54.330406900639645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd7568ec00838f%3A0x4340984a6fdfc89b!2sCUPRA%20Gda%C5%84sk%20-%20Szad%C3%B3%C5%82ki%20-%20Autoryzowany%20Dealer%20i%20Serwis!5e0!3m2!1spl!2spl!4v1684756404359!5m2!1spl!2spl" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
-                    <div class="map-desc">
-                        <p class="map-desc-text">CUPRA Plichta</p>
-                        <p class="map-desc-text">Autoryzowany Serwis i Salon</p>
-                        <p class="map-desc-text">Lubowidzka 40</p>
-                        <p class="map-desc-text">80-174 Gdańsk</p>
-                        <p class="map-desc-text">+48 58 506 67 60</p>
-                        <a href="mailto:cupra@plichta.com.pl" class="map-desc-text mb-32 blue-link">cupra@plichta.com.pl</a>
-                        <a href="#" class="btn btn--white fs-16 lh-48">Wyznacz trasę</a>
+            <div class="container">
+                <div class="interested-box ta-c">
+                    <div class="position-shadow-box">
+                        <p class="fs-16 lh-26 fw-300 white mb-16">Zainteresowany?</p>
+                        <h4 class="sensation-heading white fw-400 mb-48">Zapytaj o indywidualną ofertę</h4>
+                        <a href="#offer" class="btn btn--cream fs-16 fw-400 ask-offer">Napisz do nas</a>
                     </div>
                 </div>
-                <div class="map-box">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2323.312510893906!2d18.643163377673208!3d54.3867948963674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd73a733b5fc15%3A0x75c61b1ccbefb2d2!2sCUPRA%20Gda%C5%84sk%20-%20Letnica%20-%20CUPRA%20Studio%20-%20Autoryzowany%20Dealer%20i%20Serwis!5e0!3m2!1spl!2spl!4v1684756712559!5m2!1spl!2spl" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
-                    <div class="map-desc">
-                        <p class="map-desc-text">CUPRA Studio Gdańsk</p>
-                        <p class="map-desc-text">Autoryzowany Serwis i Salon</p>
-                        <p class="map-desc-text">ul. Marynarki Polskiej 92,</p>
-                        <p class="map-desc-text">80-557 Gdańsk</p>
-                        <p class="map-desc-text">+48 58 506 65 65</p>
-                        <a href="mailto:cuprastudio@plichta.com.pl" class="map-desc-text mb-32 blue-link">cuprastudio@plichta.com.pl</a>
-                        <a href="#" class="btn btn--white fs-16 lh-48">Wyznacz trasę</a>
+                <div class="max-w-436">
+                    <p class="fs-16 lh-26 fw-300 black ta-c" id="map">Lokalizacja i kontakt</p>
+                    <h4 class="fs-36 black fw-300 mb-64 ta-c max-w-436 margin-auto">Odwiedź nas i przekonaj się sam, czym jest CUPRA</h4>
+                </div>
+                <div class="maps-container d-f gap-32">
+                    <div class="map-box">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2326.5035833539273!2d18.533226277671385!3d54.330406900639645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd7568ec00838f%3A0x4340984a6fdfc89b!2sCUPRA%20Gda%C5%84sk%20-%20Szad%C3%B3%C5%82ki%20-%20Autoryzowany%20Dealer%20i%20Serwis!5e0!3m2!1spl!2spl!4v1684756404359!5m2!1spl!2spl" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+                        <div class="map-desc">
+                            <p class="map-desc-text">CUPRA Plichta</p>
+                            <p class="map-desc-text">Autoryzowany Serwis i Salon</p>
+                            <p class="map-desc-text">Lubowidzka 40</p>
+                            <p class="map-desc-text">80-174 Gdańsk</p>
+                            <p class="map-desc-text">+48 58 506 67 60</p>
+                            <a href="mailto:cupra@plichta.com.pl" class="map-desc-text mb-32 blue-link">cupra@plichta.com.pl</a>
+                            <a href="#" class="btn btn--white fs-16 lh-48">Wyznacz trasę</a>
+                        </div>
+                    </div>
+                    <div class="map-box">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2323.312510893906!2d18.643163377673208!3d54.3867948963674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd73a733b5fc15%3A0x75c61b1ccbefb2d2!2sCUPRA%20Gda%C5%84sk%20-%20Letnica%20-%20CUPRA%20Studio%20-%20Autoryzowany%20Dealer%20i%20Serwis!5e0!3m2!1spl!2spl!4v1684756712559!5m2!1spl!2spl" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+                        <div class="map-desc">
+                            <p class="map-desc-text">CUPRA Studio Gdańsk</p>
+                            <p class="map-desc-text">Autoryzowany Serwis i Salon</p>
+                            <p class="map-desc-text">ul. Marynarki Polskiej 92,</p>
+                            <p class="map-desc-text">80-557 Gdańsk</p>
+                            <p class="map-desc-text">+48 58 506 65 65</p>
+                            <a href="mailto:cuprastudio@plichta.com.pl" class="map-desc-text mb-32 blue-link">cuprastudio@plichta.com.pl</a>
+                            <a href="#" class="btn btn--white fs-16 lh-48">Wyznacz trasę</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section-offer">
+        <section class="section-offer" id="offer">
             <div class="container">
                 <div class="d-f jc-b ai-c">
                     <div class="d-f ai-c gap-16 cls-offer">
@@ -549,7 +567,6 @@
         </section>
     </main>
     <footer class="footer d-f ai-c">
-        <div class="container">
             <div class="maps-container d-f">
                 <div class="footer-column d-f ai-c jc-b">
                     <p class="uppercase fs-14 lh-24 fw-300 black">SEAT CUPRA S.A.U. <span class="currentyear"></span> ®</p>
@@ -563,7 +580,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </footer>
 </body>
 </html>

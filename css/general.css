@@ -49,7 +49,7 @@
 
 html {
     font-size: 62.5%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 body {
@@ -60,7 +60,7 @@ body {
 .container{
     max-width: 143.6rem;
     margin: 0 auto;
-    position: relative;
+    /* position: relative; */
 }
 
 .heading--primary{
@@ -337,6 +337,10 @@ button{
 
 .lh-48{
     line-height: 48px;
+}
+
+.lh-120p{
+    line-height: 120%;
 }
 
 .uppercase{

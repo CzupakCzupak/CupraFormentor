@@ -11,7 +11,15 @@ const formentorSplide = new Splide( '.splide-formentor-desc', {
     perPage: 3,
     // focus  : 0,
     gap: '3.2rem',
-} );
+    breakpoints: {
+          1400: {
+              perPage: 2,
+          },
+          700: {
+              perPage: 1,
+          },
+    }
+});
 formentorSplide.mount()
 
 const splidesAmazed = document.querySelectorAll('.splide-amazed')
@@ -80,21 +88,21 @@ function listActive(e){
     }
 }
 
+
+
 const currentYear = new Date().getFullYear();
 const yearEl = document.querySelector(".currentyear");
 
 yearEl.textContent = currentYear;
 
 
-const header = document.querySelector('.header')
+const header = document.querySelector('.nav-absolute')
 const allLinks = document.querySelectorAll("a:link");
 
 allLinks.forEach(function (link) {
   link.addEventListener("click", function (e) {
     e.preventDefault();
     const href = link.getAttribute("href");
-    console.log(href);
-
     if (href === "#")
       window.scrollTo({
         top: 0,
@@ -102,18 +110,18 @@ allLinks.forEach(function (link) {
       });
     // scrool to other links
     if (href !== "#" && href.startsWith("#")) {
-      const sectionEl = document.querySelector(href);
+      const sectionEl = document.querySelector(`${href}`);
       sectionEl.scrollIntoView({ behavior: "smooth" });
     }
 
     // close mobile nav
-    if (header.classList.contains("nav-open")) {
-      header.classList.remove("nav-open");
+    if (header.classList.contains("active")) {
+      header.classList.remove("active");
     }
   });
 });
 
-const offerBtn = document.querySelector('.ask-offer')
+const offerBtn = document.querySelectorAll('.ask-offer')
 const sectionOffer = document.querySelector('.section-offer')
 const clsBtn = document.querySelectorAll('.cls-offer')
 
@@ -122,8 +130,22 @@ clsBtn.forEach(item => {
 })
 
 
-offerBtn.addEventListener('click', toggleOffer)
+offerBtn.forEach(item => {
+    item.addEventListener('click', toggleOffer)
+
+})
 function toggleOffer(){
     sectionOffer.classList.toggle('offer-active')
 }
+const hamburger = document.querySelectorAll('.toggle')
+hamburger.forEach(item => {
+    item.addEventListener("click",()=>{
+        if(sectionOffer.classList.contains("offer-active")){
+            sectionOffer.classList.remove('offer-active')
+        }
+        header.classList.toggle('active')
+    })
+})
+
+
 

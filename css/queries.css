@@ -1,0 +1,393 @@
+@media(max-width:94em) {
+
+    .container,.cta-container {
+        padding: 0 1.5rem;
+    }
+
+    .hero--banner{
+        left: 1.5rem;
+    }
+
+    .nav-absolute {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 75%;
+        height: 100vh;
+        transform: translate(100%);
+        background-color: #f5f5f5;
+        padding: 10.4rem 0;
+        transition: .5s all;
+    }
+    
+    .nav-absolute.active {
+        transform: translate(0);
+    }
+    
+    .links--container {
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .close-icon {
+        position: absolute;
+        top: 3.7rem;
+        right: 3rem;
+    }
+
+    .toggle {
+        display: block;
+    }
+
+    .main--nav {
+        width: 50%;
+    }
+    
+    .main--nav-list {
+        flex-direction: column;
+    }
+
+    .main--nav-list li a {
+        width: 100%;
+        display: inline-block;
+        border-bottom: 1px solid #75787B;
+    }
+
+    .btn--container {
+        text-align: center;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .btn--container li, li a {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .maps-container {
+        padding: 0 1.5rem;
+    }
+
+}
+
+@media (max-width:89em) {
+
+    .amazed-desc {
+        position: unset;
+        padding: 1.5rem;
+    }
+
+    .car-box-img {
+        width: 50rem;
+        height: auto;
+    }
+
+    .landscape-desc {
+        width: 100%;
+        height: 32rem;
+    }
+
+    .splide-amazed .splide__arrow--prev {
+        left: 2rem;
+    }
+    
+    .splide-amazed .splide__arrow--next {
+        right: 2rem;
+    }
+
+    .splide-models .splide__arrows .splide__arrow--prev{
+        left:10vw;
+    }
+    
+    .splide-models .splide__arrows .splide__arrow--next{
+        right:10vw;
+    }
+}
+
+@media (max-width: 71em) {
+
+    .map-box {
+        height: unset;
+    }
+
+    .map-desc {
+        width: 100%;
+        position: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .map {
+        height: 30rem;
+    }
+
+    .car-box-img {
+        width: unset;
+    }
+
+    .landscape-desc {
+        width: 38.8rem;
+        height: 36.9rem;
+    }
+
+    .img-amazed{
+        width: 100%;
+    }
+
+    .amazed-row  {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .amazed-row-right{
+        flex-direction: column-reverse;
+    }
+
+    .splide-amazed{
+        max-width: 110rem;
+        width: 100%;
+    }
+
+    .amazed-desc{
+        width: 100%;
+    }
+
+    .amazed-desc .margin-auto{
+        max-width: unset;
+    }
+
+    .amazed-desc-left{
+        text-align: right;
+    }
+
+    .gap-159{
+        gap: unset;
+    }
+
+    .btn-text{
+        flex-direction: column;
+        gap: 3.2rem;
+    }
+
+}
+
+@media(max-width: 59em){
+    
+    .hero--video{
+        height: 60vh;
+    }
+
+    .hero--banner{
+        max-width: 60rem;
+    }
+
+    .car-box-img {
+        max-width: 50rem;
+        height: auto;
+    }
+
+    .landscape-desc {
+        width: 100%;
+        height: 37rem;
+    }
+
+    .heading--primary{
+        font-size: 5rem;
+    }
+
+    .maps-container{
+        flex-direction: column;
+    }
+
+    .map-box{
+        width: 100%;
+        max-width: unset;
+    }
+
+    .map{
+        height: 40rem;
+    }
+
+    .footer .maps-container{
+        align-items: center;
+    }
+
+    .footer-column,.footer-column:first-child{
+        padding: 1.6rem 0;
+    }
+
+    .footer-column:first-child{
+        border: unset;
+        border-bottom: 1px solid #D8D8D8;
+    }
+
+    .splide-models .splide__arrows .splide__arrow--prev{
+        left:5vw;
+    }
+    
+    .splide-models .splide__arrows .splide__arrow--next{
+        right:5vw;
+    }
+    
+    .try--out-columns{
+        flex-direction: column;
+    }
+
+    .try--second-column{
+        align-self:flex-end;
+    }
+
+    .sensation-heading{
+        font-size: 3.5rem;
+    }
+
+}
+
+@media (max-width:38em){
+
+    .heading--tertiary{
+        font-size:3.6rem;
+    }
+
+    .slide-img{
+        width: 60rem;
+    }
+
+    .section-offer .cta-container{
+        padding: unset;
+    }
+
+    .car-option-title{
+        /* display: none; */
+    }
+
+    .car-option-box{
+        padding: 0;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .arrow-down{
+        top: 2rem;
+    }
+
+    .car-select-img{
+        top: unset;
+        left: unset;
+        position: relative;
+    }
+
+    .btns-price{
+        flex-direction: column;
+    }
+
+    .position-heading{
+        font-size:2rem;
+    }
+
+    .heading--primary{
+        font-size: 3rem;
+    }
+
+    .hero--head{
+        font-size: 1.5rem;
+    }
+
+    .amazed-desc-heading{
+        font-size: 3rem;
+        line-height: 3.2rem;
+        margin-bottom: 2.4rem;
+    }
+
+    .container .maps-container{
+        padding: 0;
+    }
+
+    .max-w-436{
+        font-size:3rem;
+    }
+
+    .hero--video{
+        height: 60vh;
+    }
+
+    .hero--banner{
+        max-width: 40rem;
+    }
+}
+
+@media (max-width:28em){
+
+    .container{
+        padding: 0 1rem;
+    }
+
+    .slide-img{
+        width: 35rem;
+    }
+
+    .heading--tertiary{
+        font-size:3rem;
+    }
+
+    .car-box .fs-36{
+        font-size: 3rem;
+    }
+
+
+    .car-option-title{
+        display: none;
+    }
+
+    .car-box {
+        height: auto;
+    }
+
+    .car-box-img{
+        width: 100%;
+    }
+
+    .landscape-desc {
+        position: unset;
+        width: 100%;
+        height: 45rem;
+    }
+
+    .cars-container{
+        row-gap: 5rem;
+    }
+
+    .nav-absolute{
+        width: 100vw;
+    }
+
+    .cta-container{
+        padding: 0 1.6rem;
+    }
+
+    .sensation-heading{
+        font-size:3rem;
+    }
+
+    .splide-amazed .splide__arrows .splide__arrow{
+        width: 3rem;
+        height: 3rem;
+        border-radius: unset;
+        background-color: #fff;
+        opacity: .6;
+    }
+
+    .max-w-436{
+        padding: 0 1.5rem;
+    }
+
+    .splide-formentor-desc .splide__pagination .splide__pagination__page{
+        width: 1rem;
+    }
+
+
+}
