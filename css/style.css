@@ -56,9 +56,25 @@
     border: 1px solid #000;
 }
 
+.btn--cream:hover{
+    background-color: white;
+}
+
+.btn--black-cream:hover{
+    box-shadow: inset 0 0 0 1px #DBD3CB;
+}
+
+.btn--white:hover{
+  box-shadow: inset 0 0 0 1px #000;
+}
+
 .btn--black{
     background-color: #000;
     color: #FFF;
+}
+
+.btn--black:hover{
+    background: #494949;
 }
 
 .btn--black-cream{
@@ -579,6 +595,10 @@ input[type=submit]{
     border-bottom:1px solid #75787B;
     border-top:1px solid #75787B;
     width: calc(100% - 48px);
+}
+
+.btn--round:hover{
+    background: #494949;
 }
 
 
