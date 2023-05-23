@@ -4,6 +4,10 @@
         padding: 0 1.5rem;
     }
 
+    .pad-32{
+        padding: unset;
+    }
+
     .hero--banner{
         left: 1.5rem;
     }
@@ -175,12 +179,12 @@
 
 @media(max-width: 59em){
     
-    .hero--video{
-        height: 60vh;
+    .hero--banner {
+        max-width: 45rem;
     }
 
-    .hero--banner{
-        max-width: 60rem;
+    .hero--video{
+        height: 80vh;
     }
 
     .car-box-img {
@@ -194,7 +198,7 @@
     }
 
     .heading--primary{
-        font-size: 5rem;
+        font-size: 3.6rem;
     }
 
     .maps-container{
@@ -245,10 +249,39 @@
 
 }
 
+@media(max-width: 48em){
+
+    .heading--primary{
+        font-size: 3.2rem;
+    }
+
+    .heading--secondary{
+        font-size: 3rem;
+    }
+    
+    .hero--banner{
+        max-width: 40rem;
+    }
+
+    .try--out-front{
+        margin-bottom: ;
+    }
+
+    .try--out-side{
+        margin-top: 12rem;
+    }
+
+}
+
 @media (max-width:38em){
 
+    .hero--video {
+        height: 60vh;
+    }
+
     .heading--tertiary{
-        font-size:3.6rem;
+        font-size:3rem;
+        line-height: 3.6rem;
     }
 
     .slide-img{
@@ -257,10 +290,6 @@
 
     .section-offer .cta-container{
         padding: unset;
-    }
-
-    .car-option-title{
-        /* display: none; */
     }
 
     .car-option-box{
@@ -282,19 +311,13 @@
     }
 
     .btns-price{
-        flex-direction: column;
+        gap: 2rem;
+        flex-wrap: wrap;
     }
 
     .position-heading{
-        font-size:2rem;
-    }
-
-    .heading--primary{
-        font-size: 3rem;
-    }
-
-    .hero--head{
-        font-size: 1.5rem;
+        bottom: 1rem;
+        left: 1rem;
     }
 
     .amazed-desc-heading{
@@ -312,15 +335,49 @@
     }
 
     .hero--video{
-        height: 60vh;
+        height: 80vh;
     }
 
     .hero--banner{
         max-width: 40rem;
     }
+
+    .heading-secondary{
+        font-size: 2rem;
+    }
+
+    .img-text-container{
+        margin-bottom: 4rem;
+    }
+
+    .car-media{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .car-media .fs-14{
+        margin-bottom: unset;
+    }
+
+    .splide-models .power{
+        max-width: 32rem;
+    }
+
+    .splide-models .splide__arrow{
+        top: 60%;
+    }
 }
 
-@media (max-width:28em){
+@media (max-width:28.5em){
+
+    .section-amazed .container{
+        padding: 0 1rem;
+    }
+
+    .splide-formentor-desc .splide__arrows .splide__arrow {
+        width: 3rem;
+        height: 3rem;
+    }
 
     .container{
         padding: 0 1rem;
@@ -337,7 +394,6 @@
     .car-box .fs-36{
         font-size: 3rem;
     }
-
 
     .car-option-title{
         display: none;
