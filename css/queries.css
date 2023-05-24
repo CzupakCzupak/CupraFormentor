@@ -370,6 +370,10 @@
 
 @media (max-width:28.5em){
 
+    .br {
+        display: block;
+    }
+
     .btn--container {
         width: 70%;
     }

@@ -117,6 +117,7 @@ allLinks.forEach(function (link) {
     // close mobile nav
     if (header.classList.contains("active")) {
       header.classList.remove("active");
+      shadow.classList.remove('active')
     }
   });
 });
@@ -137,6 +138,8 @@ offerBtn.forEach(item => {
 function toggleOffer(){
     sectionOffer.classList.toggle('offer-active')
 }
+
+const shadow = document.querySelector('.shadow')
 const hamburger = document.querySelectorAll('.toggle')
 hamburger.forEach(item => {
     item.addEventListener("click",()=>{
@@ -144,8 +147,13 @@ hamburger.forEach(item => {
             sectionOffer.classList.remove('offer-active')
         }
         header.classList.toggle('active')
+        shadow.classList.toggle('active')
     })
 })
 
+shadow.addEventListener('click', ()=> {
+    header.classList.remove("active");
+    shadow.classList.remove('active')
+})
 
 
