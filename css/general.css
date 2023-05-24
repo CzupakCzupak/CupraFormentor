@@ -360,3 +360,6 @@ button{
     margin: 0 auto 6.4rem;
 }
 
+label,input{
+    cursor: pointer;
+}

@@ -139,16 +139,8 @@
             padding: 10px;
         }
 
-        .arrow-down{
-            position: absolute;
-            top: 6.9rem;
-            right: 2rem;
-            transform: .3s all;
-            z-index: 80;
-        }
 
         .car-select-active .arrow-down{
-            transform: rotate(180deg);
         }
 
         .car-select-pos{
@@ -156,10 +148,170 @@
             top: 0;
             right: 0;
         }
+
+/* kKUWRAAAAAAAAAAAAAAAAAAAA */
+
+        .select-btn{
+            max-width: 55.3rem;
+            position: relative;
+            z-index: 80;
+            height: 14.7rem;
+        }
+
+        .chosen-car,.option-car{
+            width:50.3rem;
+            border: 1px solid #D5D5D5;
+            margin-left: auto;
+            cursor: pointer;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+        }
+
+        .car-img,.car-option-title,.option-car .car-img{
+            position: relative;
+            left: -5rem;
+        }
+        .arrow-down{
+            position: absolute;
+            top: 6.9rem;
+            right: 2rem;
+        }
+
+        .car-list .chosen-car,.option-car{
+            top: 100%;
+            border-top: unset;
+        }
+
+        .car-list{
+            opacity: 0;
+            visibility: hidden;
+            transition-property: all;
+            transition-duration: .3s;
+        }
+
+        .car-list.active{
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .select-btn.active .arrow-down{
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 <body>
-    <div class="car-select-btn">
+
+    <div class="d-f gap-159">
+    <div class="select-btn">
+        <div class="chosen-car">
+            <input type="hidden" name="model" value="Cupra Formentor">
+            <img src="img/cta-formentor.png" alt="Cupra formentor" class="car-img chosen-car-img">
+            <p class="car-option-title fs-16 fw-400 lh-21 chosen-car-title">Cupra Formentor</p>
+            <img src="img/arrow-down.svg" alt="Arrow down" class="arrow-down">
+        </div>
+        <div class="car-list">
+            <div class="option-car">
+                <img src="img/cta-formentor.png" alt="Cupra formentor" class="car-img">
+                <p class="car-option-title fs-16 fw-400 lh-21">Cupra Formentor</p>
+            </div>
+            <div class="option-car">
+                <img src="img/cta-leon.png" alt="Cupra Leon" class="car-img">
+                <p class="car-option-title fs-16 fw-400 lh-21">Cupra Leon</p>
+            </div>
+            <div class="option-car">
+                <img src="img/cta-sportstourer.png" alt="Cupra Leon Sportstourer" class="car-img">
+                <p class="car-option-title fs-16 fw-400 lh-21">Cupra Leon Sportstourer</p>
+            </div>
+            <div class="option-car">
+                <img src="img/cta-ateca.png" alt="Cupra Ateca" class="car-img">
+                <p class="car-option-title fs-16 fw-400 lh-21">Cupra Ateca</p>
+            </div>
+            <div class="option-car">
+                <img src="img/cta-born.png" alt="Nowa Cupra Born" class="car-img">
+                <p class="car-option-title fs-16 fw-400 lh-21">Nowa Cupra Born</p>
+            </div>
+        </div>
+    </div>
+    <div class="select-btn">
+        <div class="chosen-car">
+            <input type="hidden" name="model" value="Cupra Formentor">
+            <img src="img/cta-formentor.png" alt="Cupra formentor" class="car-img chosen-car-img">
+            <p class="car-option-title fs-16 fw-400 lh-21 chosen-car-title">Cupra Formentor</p>
+            <img src="img/arrow-down.svg" alt="Arrow down" class="arrow-down">
+        </div>
+        <div class="car-list">
+            <div class="option-car">
+                <img src="img/cta-formentor.png" alt="Cupra formentor" class="car-img">
+                <p class="car-option-title fs-16 fw-400 lh-21">Cupra Formentor</p>
+            </div>
+            <div class="option-car">
+                <img src="img/cta-leon.png" alt="Cupra Leon" class="car-img">
+                <p class="car-option-title fs-16 fw-400 lh-21">Cupra Leon</p>
+            </div>
+            <div class="option-car">
+                <img src="img/cta-sportstourer.png" alt="Cupra Leon Sportstourer" class="car-img">
+                <p class="car-option-title fs-16 fw-400 lh-21">Cupra Leon Sportstourer</p>
+            </div>
+            <div class="option-car">
+                <img src="img/cta-ateca.png" alt="Cupra Ateca" class="car-img">
+                <p class="car-option-title fs-16 fw-400 lh-21">Cupra Ateca</p>
+            </div>
+            <div class="option-car">
+                <img src="img/cta-born.png" alt="Nowa Cupra Born" class="car-img">
+                <p class="car-option-title fs-16 fw-400 lh-21">Nowa Cupra Born</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+        const selectBtn = document.querySelectorAll('.select-btn')
+
+        const dropdownList = document.querySelectorAll('.car-list')
+        selectBtn.forEach(item =>{
+                item.addEventListener('click',openList)
+        })
+
+        function openList(e){
+            const currentSelect = e.target.closest('.select-btn')
+            const currentCarList = currentSelect.querySelector('.car-list')
+            currentCarList.classList.toggle('active')
+            currentSelect.classList.toggle('active')
+        }
+
+        const carOptions = document.querySelectorAll('.option-car')
+        carOptions.forEach(item => {
+            item.addEventListener('click', (e)=>{
+                const parent = e.target.closest('.option-car')
+                const grandparent = parent.closest('.select-btn')
+                const chosenTitle = grandparent.querySelector('.chosen-car-title')
+                const chosenImg = grandparent.querySelector('.chosen-car-img')
+                const name = parent.querySelector('.car-option-title').textContent
+                const img = parent.querySelector('.car-img').src
+                const hidden = grandparent.querySelector('input[type=hidden]')
+                chosenImg.src = img
+                chosenTitle.textContent = name
+                hidden.value = name
+            })
+        })
+
+        const body = document.body
+        body.addEventListener('click', closeList)
+        function closeList(e){
+            if(!e.target.classList.contains('car-list') && !e.target.closest('.select-btn')){
+                selectBtn.forEach(item =>{
+                    item.classList.remove('active')
+                })
+                dropdownList.forEach(item =>{
+                    item.classList.remove('active')
+                })
+            }
+        }
+
+
+    </script>
+    <!-- <div class="car-select-btn">
         <input type="hidden" value="Cupra Formentor" class="cta-hidden">
         <div class="car-select-pos">
             <img src="img/arrow-down.svg" alt="Arrow down" class="arrow-down">
@@ -186,57 +338,51 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <p>gay</p>
     <script>
-        const select = document.querySelector('.car-select-btn')
-        const selectOptions = document.querySelectorAll('.car-option-box')
-        const body = document.body
-        const ctaHidden = document.querySelector('.cta-hidden')
+        // const select = document.querySelector('.car-select-btn')
+        // const selectOptions = document.querySelectorAll('.car-option-box')
+        // const body = document.body
+        // const ctaHidden = document.querySelector('.cta-hidden')
         
-        body.addEventListener('click', closeList)
-        select.addEventListener('click', listActive)
-        // selectOptions.forEach(item =>{
-        //     item.addEventListener('click',changeAttr)
-        // })
+        // body.addEventListener('click', closeList)
+        // select.addEventListener('click', listActive)
+        // // selectOptions.forEach(item =>{
+        // //     item.addEventListener('click',changeAttr)
+        // // })
 
-        function closeList(e){
-            if(!e.target.classList.contains('car-select-btn') && !e.target.closest('.car-select-btn')){
-                select.classList.remove('car-select-active')
-                selectOptions.forEach(item => {
-                    item.classList.remove('car-option-active')
-                })
-                flag = 0
-            }
-        }
+        // function closeList(e){
+        //     if(!e.target.classList.contains('car-select-btn') && !e.target.closest('.car-select-btn')){
+        //         select.classList.remove('car-select-active')
+        //         selectOptions.forEach(item => {
+        //             item.classList.remove('car-option-active')
+        //         })
+        //         flag = 0
+        //     }
+        // }
         
-        let flag = 0
-        function listActive(e){
-            select.classList.add('car-select-active')
-            selectOptions.forEach(item => {
-                item.classList.add('car-option-active')
-            })
-            if(flag > 0){
-                const parentEl = e.target.closest('.car-option-box');
-                const value = parentEl.dataset.name
-                ctaHidden.value = value
-                select.classList.remove('car-select-active')
-                selectOptions.forEach(item => {
-                    item.classList.remove('car-option-active')
-                    item.classList.remove('first-option')
-                })
-                parentEl.classList.add('first-option')
-                flag = 0
-            }else{
-                flag++
-            }
-        }
-
-
-
-
-
+        // let flag = 0
+        // function listActive(e){
+        //     select.classList.add('car-select-active')
+        //     selectOptions.forEach(item => {
+        //         item.classList.add('car-option-active')
+        //     })
+        //     if(flag > 0){
+        //         const parentEl = e.target.closest('.car-option-box');
+        //         const value = parentEl.dataset.name
+        //         ctaHidden.value = value
+        //         select.classList.remove('car-select-active')
+        //         selectOptions.forEach(item => {
+        //             item.classList.remove('car-option-active')
+        //             item.classList.remove('first-option')
+        //         })
+        //         parentEl.classList.add('first-option')
+        //         flag = 0
+        //     }else{
+        //         flag++
+        //     }
+        // }
     </script>
 
 

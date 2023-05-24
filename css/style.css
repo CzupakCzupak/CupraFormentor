@@ -45,7 +45,7 @@
 
 .btn{
     padding: 0 2.4rem;
-    line-height: 4.8rem;
+    line-height: 4.6rem;
     max-height: 4.8rem;
     display: inline-block;
     border: unset;
@@ -79,6 +79,7 @@
 }
 
 .btn--black-cream{
+    line-height: 4.6rem;
     border: 1px solid #DBD3CB;
 }
 
@@ -149,12 +150,13 @@
 .try--first-column{
     max-width: 78.7rem;
     width: 100%;
+    flex: 1 1 78.7rem;
 }
 
 .try--second-column{
     max-width: 55.3rem;
     width: 100%;
-    height: 100%;
+    flex: 1 1 55.3rem;
 }
 
 .max-w-553{
@@ -279,6 +281,7 @@
 
 .splide-formentor-desc .splide__pagination .splide__pagination__page.is-active{
     background: #FFFFFF;
+    border-radius: 0;
 }
 
 .splide-formentor-desc .splide__pagination .splide__pagination__page{
@@ -315,6 +318,7 @@
     position: absolute;
     width: 67rem;
     background-color: #FFF;
+    z-index: 1;
 }
 
 .amazed-desc-right{
@@ -469,45 +473,54 @@
     background-color: #75787B;
 }
 
-.car-select-btn{
+.select-btn{
     max-width: 55.3rem;
-    height: auto;
     position: relative;
     z-index: 80;
     height: 14.7rem;
 }
 
-.car-select-option{
-    max-width: 50.3rem;
-    width: 100%;
-    position: relative;
-}
-
-.car-select-img{
-    height: 13.9rem;
-    position: absolute;
-    top: 3px;
-    left: -5rem;
-}
-
-.car-option-box{
-    opacity: 0;
-    visibility: hidden;
+.chosen-car,.option-car{
     width:50.3rem;
     border: 1px solid #D5D5D5;
-    padding: 6.2rem 0 6.2rem 25.1rem;
     margin-left: auto;
-    position: relative;
     cursor: pointer;
-    order: 0;
-    transition-property: visibility, opacity;
-    transition-duration: .5s;
     background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
 }
 
-.car-option-box{
-    border-top:unset;
+.car-img,.car-option-title,.option-car .car-img{
+    position: relative;
+    left: -5rem;
 }
+.arrow-down{
+    position: absolute;
+    top: 6.9rem;
+    right: 2rem;
+}
+
+.car-list .chosen-car,.option-car{
+    top: 100%;
+    border-top: unset;
+}
+
+.car-list{
+    opacity: 0;
+    visibility: hidden;
+    transition-property: all;
+    transition-duration: .3s;
+}
+
+.car-list.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.select-btn.active .arrow-down{
+    transform: rotate(180deg);
+}
+
 
 .lh-21{
     line-height: 2.1rem;
@@ -517,9 +530,8 @@
     display: inline-block;
 }
 
-.car-option-active,.first-option{
-    visibility: visible;
-    opacity: 1;
+.car-option-active,.first-option{   
+    display: block;
 }
 
 .first-option{
@@ -567,16 +579,24 @@ input[type=submit]{
 .car-box{
     background-color: #fff;
     position: relative;
-    height: 58rem;
+    max-width: 43.6rem;
+    width: 100%;
+}
+
+.car-box img{
+    width: 100%;
 }
 
 .landscape-desc{
-    width: 38.8rem;
-    height: 36.9rem;
-    padding: 4rem 2.4rem;
+    max-width: 38.8rem;
+    width: 100%;
+    padding: 4rem 2.4rem 0;
     background-color: #fff;
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    top: -24px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
 }
 
 .btn--round{
@@ -590,8 +610,7 @@ input[type=submit]{
 }
 
 .btn--round-borders{
-    position: absolute;
-    bottom: 0;
+    margin-top: auto;
     padding: 4rem 0;
     border-bottom:1px solid #75787B;
     border-top:1px solid #75787B;
@@ -731,6 +750,7 @@ input[type=submit]{
 
 .toggle{
     display: none;
+    cursor: pointer;
 }
 
 .nav-absolute{
@@ -739,16 +759,11 @@ input[type=submit]{
 
 }
 
-.shadow.active{
-    background-color: rgba(0, 0, 0,0.5);
-    z-index: 97;
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
+.shadow{
+    display: none;
 }
 
-.br {
-    display: none;
+.sticky{
+    box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+
 }

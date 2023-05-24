@@ -33,62 +33,48 @@ splidesAmazed.forEach(item => {
 
 })
 
-const select = document.querySelector('.car-select-btn')
-const selectOptions = document.querySelectorAll('.car-option-box')
+const selectBtn = document.querySelectorAll('.select-btn')
+
+const dropdownList = document.querySelectorAll('.car-list')
+selectBtn.forEach(item =>{
+        item.addEventListener('click',openList)
+})
+
+function openList(e){
+    const currentSelect = e.target.closest('.select-btn')
+    const currentCarList = currentSelect.querySelector('.car-list')
+    currentCarList.classList.toggle('active')
+    currentSelect.classList.toggle('active')
+}
+
+const carOptions = document.querySelectorAll('.option-car')
+carOptions.forEach(item => {
+    item.addEventListener('click', (e)=>{
+        const parent = e.target.closest('.option-car')
+        const grandparent = parent.closest('.select-btn')
+        const chosenTitle = grandparent.querySelector('.chosen-car-title')
+        const chosenImg = grandparent.querySelector('.chosen-car-img')
+        const name = parent.querySelector('.car-option-title').textContent
+        const img = parent.querySelector('.car-img').src
+        const hidden = grandparent.querySelector('input[type=hidden]')
+        chosenImg.src = img
+        chosenTitle.textContent = name
+        hidden.value = name
+    })
+})
+
 const body = document.body
-const ctaHidden = document.querySelector('.cta-hidden')
-
-const offerSelect = document.querySelector('.offer-select')
-
-
 body.addEventListener('click', closeList)
-select.addEventListener('click', listActive)
-offerSelect.addEventListener('click', listActive)
-// selectOptions.forEach(item =>{
-//     item.addEventListener('click',changeAttr)
-// })
-
 function closeList(e){
-    if(!e.target.classList.contains('car-select-btn') && !e.target.closest('.car-select-btn')){
-        select.classList.remove('car-select-active')
-        selectOptions.forEach(item => {
-            item.classList.remove('car-option-active')
+    if(!e.target.classList.contains('car-list') && !e.target.closest('.select-btn')){
+        selectBtn.forEach(item =>{
+            item.classList.remove('active')
         })
-        flag = 0
+        dropdownList.forEach(item =>{
+            item.classList.remove('active')
+        })
     }
 }
-
-let flag = 0
-let optionsChildren
-function listActive(e){
-    if(!e.target.closest('.offer-select')){
-        select.classList.add('car-select-active')
-        optionsChildren = select.querySelectorAll('.car-option-box')
-    }else{
-        offerSelect.classList.add('car-select-active')
-        optionsChildren = offerSelect.querySelectorAll('.car-option-box')
-    }
-    optionsChildren.forEach(item => {
-        item.classList.add('car-option-active')
-    }) 
-
-    if(flag > 0){
-        const parentEl = e.target.closest('.car-option-box');
-        const value = parentEl.dataset.name
-        ctaHidden.value = value
-        e.target.closest('.car-select-btn').classList.remove('car-select-active')
-        optionsChildren.forEach(item => {
-            item.classList.remove('car-option-active')
-            item.classList.remove('first-option')
-        })
-        parentEl.classList.add('first-option')
-        flag = 0
-    }else{
-        flag++
-    }
-}
-
-
 
 const currentYear = new Date().getFullYear();
 const yearEl = document.querySelector(".currentyear");
@@ -156,4 +142,26 @@ shadow.addEventListener('click', ()=> {
     shadow.classList.remove('active')
 })
 
+
+const sectionHeroEl = document.querySelector(".hero-section");
+const realHeader = document.querySelector(".header")
+
+const obs = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    console.log(ent);
+    if (ent.isIntersecting === false) {
+      realHeader.classList.add("sticky");
+    } else {
+      realHeader.classList.remove("sticky");
+    }
+  },
+  {
+    // In the viewport
+    root: null,
+    threshold: 0,
+    rootMargin: "-80px",
+  }
+);
+obs.observe(sectionHeroEl);
 
